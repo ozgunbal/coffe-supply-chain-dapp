@@ -1,3 +1,9 @@
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+const infuraKey = fs.readFileSync(".infuraKey").toString().trim();
+
 module.exports = {
 
     networks: {
@@ -15,7 +21,7 @@ module.exports = {
         port: 7545,
         network_id: "*", // Match any network id
         websockets: true
-      }
+      },
       /*development: {
         provider: function() {
             return new HDWalletProvider(mnemonic, "http://127.0.0.1:7545/");
@@ -51,6 +57,13 @@ module.exports = {
         // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
         // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
       // },
+      rinkeby: {
+        provider: function() {
+          return new HDWalletProvider(mnemonic,  `wss://rinkeby.infura.io/ws/v3/${infuraKey}`);
+        },
+        network_id: '4',
+        gas: 5500000,        // rinkeby has a lower block limit than mainnet
+      },
   
       // Useful for private networks
       // private: {

@@ -1,2 +1,6 @@
 project-6/node_modules/
 project-6/build/
+
+# keys and secrets
+.secret
+.infuraKey

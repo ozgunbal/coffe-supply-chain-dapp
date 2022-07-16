@@ -19,6 +19,10 @@ Changes from original boilerplate:
  - `2_start.node.sh` is modified to run frontend application. Other than this, `cd project-6/app && npm run dev` can be run at the terminal. It'll be at `http://localhost:3000/`.
  - To install npm packages it should be be run `cd project-6 &&  npm install` then `cd app && npm install`. There'll be two different `node_modules` folders and both is added to `.gitignore` files
 
+## Deployed smart contract on Rinkeby network
+- Transaction ID: 0x51c0d18d3461c35a2af3b73c2720167c181a97a648edceae738ee95f1c95e4d1
+- Contract address: 0x22eE7D79009b9eE8B370Bd6DA8C2051cC07b2F49
+
 
 ***Below part is taken from original repository.***
 
